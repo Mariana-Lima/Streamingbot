@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap') no-repeat;
+@import url('https://fonts.googleapis.com/css?family=Roboto:700,900');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    word-wrap:   break-word;
+  
+}
+
+html{ 
+   background: url("https://cdn.glitch.com/528c9c78-4ebb-4a7c-b765-4ab8d205877a%2Fwallpaperflare.com_wallpaper%20(3).jpg?v=1603641809493") no-repeat center center fixed;  
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    
+}
+
+::selection{
+    color: rgb(255,255,255);
+    background: rgb(128, 0, 0);
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ddd;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ccc;
+}
+
+.wrapper{
+    width: 600px;
+    background: rgb(255,255,255);
+    border-radius: 5px;
+    border: 0px solid lightgrey;
+    border-top: 0px;
+}
+
+.wrapper .title{
+    background: rgb(128, 0, 0);
+    font-family: 'Roboto';
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-radius: 5px 5px 0 0;  
+}
+
+.wrapper .voltar {
+  float: left;
+  margin: 10px -10px -100px 10px;
+  height: 40px;
+  text-align: center;
+ 
+}
+
+.wrapper .form{
+    background: rgb(15, 17, 17); 
+    padding: 20px 15px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+  
+}
+
+.wrapper .form .inbox{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.wrapper .form .user-inbox{
+    justify-content: flex-end;
+    margin: 13px 0;
+}
+
+.wrapper .form .inbox .icon{
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    background: transparent url("https://cdn.glitch.com/528c9c78-4ebb-4a7c-b765-4ab8d205877a%2FStreaming%20Bot%202%20(7).png?v=1603657237756") no-repeat left bottom;  
+}
+
+.wrapper .form .inbox .msg-header{
+    max-width: 60%;
+    margin-left: 20px;
+  
+}
+
+ /* mensagens do bot */
+.form .inbox .msg-header p{
+    color: rgb(255, 255, 255);
+    background: rgb(128, 0, 0);
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+.form .user-inbox .msg-header p{
+    color: #333;
+    background: #efefef;
+}
+
+ /* rodapé */
+.wrapper .typing-field{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(211, 211, 211);
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0 0 5px 5px;
+}
+
+/* altura campo de texto */
+.wrapper .typing-field .input-data{
+    height: 40px;
+    width: 550px;
+    position: relative; 
+}
+
+.wrapper .typing-field .input-data input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0 80px 0 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.typing-field .input-data input:focus{
+    border-color: rgba(0, 123, 255, 0.8);
+}
+
+.input-data input::placeholder{
+    color: #999999;
+    transition: all 0.3s ease;
+}
+
+.input-data input:focus::placeholder{
+    color: #bfbfbf;
+}
+
+.wrapper .typing-field .input-data button{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 30px;
+    width: 65px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    background: rgb(128, 0, 0);
+    border: 1px rgb(128, 0, 0);
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.wrapper .typing-field .input-data input:valid ~ button{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.typing-field .input-data button:hover{
+    background: rgb(178, 34, 34);
+}
+
+@media screen and (max-width: 640px) {
+  
+    .wrapper{
+        width: 360px;
+        background:rgb(255,255,255);
+        border-radius: 5px;
+        border: 0px solid lightgrey;
+        border-top: 0px;
+    }
+
+    .wrapper .title{
+        background: rgb(128, 0, 0);
+        font-family: 'Roboto';
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        border-radius: 5px 5px 0 0;   
+    }
+
+    .wrapper .typing-field .input-data{
+        height: 40px;
+        width: 300px;
+        position: relative; 
+    }
+
+    .wrapper .form .inbox .msg-header{
+        max-width: 80%;
+        margin-left: 20px;
+    
+    }
+
+    .wrapper .form{
+        background: rgb(15, 17, 17); 
+        padding: 20px 15px;
+        min-height: 500px;
+        max-height: 350px;
+        overflow-y: auto;
+    }
+  
+}
